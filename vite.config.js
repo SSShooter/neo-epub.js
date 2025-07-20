@@ -14,11 +14,10 @@ export default defineConfig(({ mode }) => {
         fileName: (format) => `${fileName}.${format === 'es' ? 'mjs' : 'js'}`
       },
       rollupOptions: {
-        external: ['jszip/dist/jszip', 'xmldom'],
+        external: ['jszip/dist/jszip'],
         output: {
           globals: {
-            'jszip/dist/jszip': 'JSZip',
-            'xmldom': 'xmldom'
+            'jszip/dist/jszip': 'JSZip'
           },
           exports: 'default'
         }

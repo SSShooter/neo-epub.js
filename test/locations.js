@@ -16,8 +16,8 @@ describe('Locations', function() {
 
 		});
 
-		it('parse locations from xmldom', function() {
-			var doc = core.parse(chapter, "application/xhtml+xml", true);
+		it('parse locations from native parser', function() {
+			var doc = core.parse(chapter, "application/xhtml+xml");
 			var contents = doc.documentElement;
 
 			var locations = new Locations();
