@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@types/localforage':
-        specifier: 0.0.34
-        version: 0.0.34
       core-js:
         specifier: ^3.18.3
         version: 3.44.0
@@ -441,10 +438,6 @@ packages:
 
   '@types/linkify-it@5.0.0':
     resolution: {integrity: sha512-sVDA58zAw4eWAffKOaQH5/5j3XeayukzDk+ewSsnv3p4yJEZHCCzMDiZM8e0OUrRvmpGZ85jf4yDHkHsgBNr9Q==}
-
-  '@types/localforage@0.0.34':
-    resolution: {integrity: sha512-tJxahnjm9dEI1X+hQSC5f2BSd/coZaqbIl1m3TCl0q9SVuC52XcXfV0XmoCU1+PmjyucuVITwoTnN8OlTbEXXA==}
-    deprecated: This is a stub types definition for localforage (https://github.com/localForage/localForage). localforage provides its own type definitions, so you don't need @types/localforage installed!
 
   '@types/markdown-it@12.2.3':
     resolution: {integrity: sha512-GKMHFfv3458yYy+v/N8gjufHO6MSZKCOXpZc5GXIWWy8uldwfmPn98vp81gZ5f9SVw8YYBctgfJ22a2d7AOMeQ==}
@@ -4565,10 +4558,6 @@ snapshots:
   '@types/estree@1.0.8': {}
 
   '@types/linkify-it@5.0.0': {}
-
-  '@types/localforage@0.0.34':
-    dependencies:
-      localforage: 1.10.0
 
   '@types/markdown-it@12.2.3':
     dependencies:
