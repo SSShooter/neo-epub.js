@@ -1,6 +1,9 @@
 {
-  "name": "epubjs",
+  "name": "@ssshooter/epubjs",
   "version": "0.3.93",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Parse and Render Epubs",
   "main": "lib/index.js",
   "module": "src/index.js",

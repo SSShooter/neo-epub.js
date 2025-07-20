@@ -1,24 +1,37 @@
 import Packaging from "./packaging";
 import Section from "./section";
 import Hook from "./utils/hook";
+import EpubCFI from "./epubcfi";
 
 export default class Spine {
   constructor();
+
+  spineItems: Section[];
+  spineByHref: { [key: string]: number };
+  spineById: { [key: string]: number };
 
   hooks: {
     serialize: Hook,
     content: Hook
   };
 
+  epubcfi: EpubCFI;
+  loaded: boolean;
+  items: any[];
+  manifest: any;
+  spineNodeIndex: any;
+  baseUrl: string;
+  length: number;
+
   unpack(_package: Packaging, resolver: Function, canonical: Function): void;
 
-  get(target?: string | number): Section;
+  get(target?: string | number): Section | null;
 
   each(...args: any[]): any;
 
-  first(): Section;
+  first(): Section | undefined;
 
-  last(): Section;
+  last(): Section | undefined;
 
   destroy(): void;
 
@@ -26,5 +39,5 @@ export default class Spine {
 
   private prepend(section: Section): number;
 
-  private remove(section: Section): number;
+  private remove(section: Section): Section[] | undefined;
 }
